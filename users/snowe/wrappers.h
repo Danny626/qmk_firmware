@@ -1,20 +1,3 @@
-/* Copyright 2020 Christopher Courtney, aka Drashna Jael're  (@drashna) <drashna@live.com>
- * 2021 Tyler Thrailkill (@snowe/@snowe2010) <tyler.b.thrailkill@gmail.com>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
-
 #pragma once
 #include "snowe.h"
 
@@ -47,14 +30,13 @@ NOTE: These are all the same length.  If you do a search/replace
   lengths consistent.
 */
 
-#define _________________QWERTY_L1_________________     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
+/* #define _________________QWERTY_L1_________________     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T
 #define _________________QWERTY_L2_________________     KC_A,    KC_S,    KC_D,    KC_F,    KC_G
 #define _________________QWERTY_L3_________________     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B
 
 #define _________________QWERTY_R1_________________     KC_Y,        KC_U,    KC_I,    KC_O,    KC_P
 #define _________________QWERTY_R2_________________     KC_H,        KC_J,    KC_K,    KC_L,    KC_SCLN
-#define _________________QWERTY_R3_________________     KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLASH
-
+#define _________________QWERTY_R3_________________     KC_N,        KC_M,    KC_COMM, KC_DOT,  KC_SLASH 
 
 #define ________________NUMBER_LEFT________________       KC_1,    KC_2,    KC_3,    KC_4,    KC_5
 #define ________________NUMBER_RIGHT_______________       KC_6,    KC_7,    KC_8,    KC_9,    KC_0
@@ -90,3 +72,56 @@ NOTE: These are all the same length.  If you do a search/replace
 #define _________________ADJUST_R1_________________        _______, _______, _______, _______, _______
 #define _________________ADJUST_R2_________________        RESET,   CG_TOGG, _______, _______, _______
 #define _________________ADJUST_R3_________________        _______, KC_MNXT, KC_VOLU, KC_VOLD, KC_MPLY
+*/
+
+#define _________________DVORAK_L1_________________       KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y
+#define _________________DVORAK_L2_________________       KC_A,    KC_O,    KC_E,    KC_U,    KC_I
+#define _________________DVORAK_L3_________________       KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X
+
+#define _________________DVORAK_R1_________________       KC_F,    KC_G,    KC_C,    KC_R,    KC_L
+#define _________________DVORAK_R2_________________       KC_D,    KC_H,    KC_T,    KC_N,    KC_S
+#define _________________DVORAK_R3_________________       KC_B,    KC_M,    KC_W,    KC_V,    KC_Z
+
+
+
+#define _________________NUMPAD_L1_________________       ___________________BLANK___________________
+#define _________________NUMPAD_L2_________________       ___________________BLANK___________________
+#define _________________NUMPAD_L3_________________       ___________________BLANK___________________
+
+#define _________________NUMPAD_R1_________________       KC_PPLS, KC_7,    KC_8,    KC_9,    KC_MINS
+#define _________________NUMPAD_R2_________________       KC_PAST, KC_4,    KC_5,    KC_6,    KC_SLSH
+#define _________________NUMPAD_R3_________________       _______, KC_1,    KC_2,    KC_3,    KC_0
+
+
+
+#define ___________________BLANK___________________       _______, _______, _______, _______, _______
+
+
+
+#define ________________SYMBOLS_L1_________________       KC_EXLM, KC_AT,   KC_LPRN, KC_RPRN, KC_PERC
+#define ________________SYMBOLS_L2_________________       _______, _______, KC_LCBR, KC_RCBR, _______
+#define ________________SYMBOLS_L3_________________       _______, _______, KC_LBRC, KC_RBRC, _______
+
+#define ________________SYMBOLS_R1_________________       KC_EQL,  KC_NO,   KC_NO,   KC_NO,   KC_NO
+#define ________________SYMBOLS_R2_________________       KC_EXLM, KC_HASH, KC_SLSH, KC_BSLS, KC_PIPE
+#define ________________SYMBOLS_R3_________________       _______, KC_GRV,  KC_CIRC, KC_AT,   KC_AMPR
+
+
+
+#define ________________NAVIGATE_L1________________       ___________________BLANK___________________
+#define ________________NAVIGATE_L2________________       _______, KC_LSFT, KC_LALT, KC_LCTL, _______
+#define ________________NAVIGATE_L3________________       KC_BRMU, _______, _______, _______, KC_VOLD
+
+#define ________________NAVIGATE_R1________________       _______, _______,   KC_UP, _______, _______
+#define ________________NAVIGATE_R2________________       _______, KC_LEFT, KC_DOWN, KC_RIGHT,_______
+#define ________________NAVIGATE_R3________________       KC_VOLU, KC_MPRV, KC_MPLY, KC_MNXT, _______
+
+
+
+#define _________________ADJUST_L1_________________       _______, _______, _______, _______, _______
+#define _________________ADJUST_L2_________________       RGB_HUI, RGB_SAI, RGB_VAI, _______, _______
+#define _________________ADJUST_L3_________________       RGB_HUD, RGB_SAD, RGB_VAD, _______, _______
+
+#define _________________ADJUST_R1_________________       ___________________BLANK___________________
+#define _________________ADJUST_R2_________________       ___________________BLANK___________________
+#define _________________ADJUST_R3_________________       ___________________BLANK___________________

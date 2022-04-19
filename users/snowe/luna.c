@@ -1,21 +1,3 @@
-/*
- * Copyright 2021 QMK Community
- * Copyright 2021 Tyler Thrailkill (@snowe/@snowe2010) <tyler.b.thrailkill@gmail.com>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 #include "quantum.h"
 #include "luna.h"
 
@@ -34,7 +16,7 @@ bool isJumping = false;
 bool showedJump = true;
 
 // status variables
-int current_wpm = 0;
+int current_wpm_luna = 0;
 led_t led_usb_state = {
     .num_lock = false,
     .caps_lock = false,
@@ -198,10 +180,10 @@ void render_luna(int LUNA_X, int LUNA_Y) {
         } else if(isSneaking) {
             oled_write_raw_P(sneak[abs(1 - current_frame)], ANIM_SIZE);
 
-        } else if(current_wpm <= MIN_WALK_SPEED) {
+        } else if(current_wpm_luna <= MIN_WALK_SPEED) {
             oled_write_raw_P(sit[abs(1 - current_frame)], ANIM_SIZE);
 
-        } else if(current_wpm <= MIN_RUN_SPEED) {
+        } else if(current_wpm_luna <= MIN_RUN_SPEED) {
             oled_write_raw_P(walk[abs(1 - current_frame)], ANIM_SIZE);
 
         } else {
@@ -212,12 +194,12 @@ void render_luna(int LUNA_X, int LUNA_Y) {
     // animation timer
     if(timer_elapsed32(anim_timer) > ANIM_FRAME_DURATION) {
         anim_timer = timer_read32();
-        current_wpm = get_current_wpm();
+        current_wpm_luna = get_current_wpm();
         animation_phase();
     }
 
     // this fixes the screen on and off bug
-    if (current_wpm > 0) {
+    if (current_wpm_luna > 0) {
         oled_on();
         anim_sleep = timer_read32();
     } else if(timer_elapsed32(anim_sleep) > OLED_TIMEOUT) {

@@ -16,9 +16,10 @@ RGBLIGHT_TWINKLE = no
 OLED_ENABLE = yes
 OLED_DRIVER = SSD1306
 RGB_MATRIX_ENABLE = yes
+#TAP_DANCE_ENABLE = yes
 
 OCEAN_DREAM_ENABLE = yes
-LUNA_ENABLE = no # disabled so travis build succeeds
+LUNA_ENABLE = yes # disabled so travis build succeeds
 
 # if firmware size over limit, try this option
 LTO_ENABLE = yes
