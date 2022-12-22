@@ -40,10 +40,10 @@
     K21, K22, K23, K24, K25, K26, K27, K28, K29, K2A  \
   ) \
   LAYOUT_wrapper( \
-    LT(_NUMPAD,KC_ESC), K01, K02, K03, K04, K05,     K06, K07, K08, K09, K0A, KC_BSPC, \
-    LCTL_T(KC_TAB),    K11, K12, K13, K14, K15,     K16, K17, K18, K19, K1A, KC_MINS, \
+    LT(_NUMPAD,KC_ESC),K01, K02, K03, K04, K05,     K06, K07, K08, K09, K0A, KC_BSPC, \
+    KC_LGUI,           K11, K12, K13, K14, K15,     K16, K17, K18, K19, K1A, KC_MINS, \
     KC_LSFT,           K21, K22, K23, K24, K25,     K26, K27, K28, K29, K2A, KC_RSFT, \
-          KC_LGUI, LT(_SYMBOLS,KC_DEL), SH_BKSP,   KC_ENTER, LT(_NAVIGATE,KC_SPC), KC_RALT \
+    LCTL_T(KC_TAB),LT(_SYMBOLS,KC_DEL),KC_SPC,   KC_SPC,LT(_NAVIGATE,KC_ENTER),KC_RALT \
   )
 // clang-format on
 #define LAYOUT_crkbd_base_wrapper(...) LAYOUT_crkbd_base(__VA_ARGS__)
